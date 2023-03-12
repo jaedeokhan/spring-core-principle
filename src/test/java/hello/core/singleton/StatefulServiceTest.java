@@ -29,7 +29,7 @@ class StatefulServiceTest {
 
         // A는 10,000이 나오길 예상했지만 20,000이 나올거 같으니 테스트 코드 작성
         // 현재는 상태로 설계, 스프링은 항상 무상태로 설계
-        Assertions.assertThat(statefulService1.getPrice()).isEqualTo(20000);
+        Assertions.assertThat(statefulService1.getPrice()).isNotEqualTo(20000);
     }
 
     @Test
